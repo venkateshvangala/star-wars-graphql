@@ -12,5 +12,5 @@ type VehiclesResponse {
 
 type Query {
     fetchAllVehicles: [VehiclesListResponse]
-    fetchVehiclesById(id: Int!): VehiclesListResponse
+    fetchVehiclesById(id: Int!): VehiclesResponse
 }

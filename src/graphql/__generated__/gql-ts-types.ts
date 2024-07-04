@@ -48,7 +48,7 @@ export type Query = {
   fetchFilmById?: Maybe<FilmsResponse>;
   fetchPlanetById?: Maybe<PlanetsResponse>;
   fetchStartById?: Maybe<StarsResponse>;
-  fetchVehiclesById?: Maybe<VehiclesListResponse>;
+  fetchVehiclesById?: Maybe<VehiclesResponse>;
 };
 
 
