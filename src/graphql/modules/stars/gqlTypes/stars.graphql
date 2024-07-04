@@ -1,8 +1,15 @@
-input textInput {
-    display: Boolean!
-    optional: Boolean!
+type StarsListResponse {
+    name: String
+    url: String
+}
+
+type StarsResponse {
+    name: String
+    height: String
+    birth_year: String
 }
 
 type Query {
-    fetchAllStars: String
+    fetchAllStars: [StarsListResponse]
+    fetchStartById(id: Int!): StarsResponse
 }

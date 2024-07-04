@@ -1,0 +1,14 @@
+type FilmsListResponse {
+    title: String
+    url: String
+}
+
+type FilmsResponse {
+    title: String
+    episode_id: Int
+}
+
+type Query {
+    fetchAllFilms: [FilmsListResponse]
+    fetchFilmById(id: Int!): FilmsResponse
+}

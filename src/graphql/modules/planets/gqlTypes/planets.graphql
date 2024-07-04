@@ -1,0 +1,15 @@
+type PlanetsListResponse {
+    name: String
+    url: String
+}
+
+type PlanetsResponse {
+    name: String
+    climate: String
+    terrain: String
+}
+
+type Query {
+    fetchAllPlanets: [PlanetsListResponse]
+    fetchPlanetById(id: Int!): PlanetsResponse
+}

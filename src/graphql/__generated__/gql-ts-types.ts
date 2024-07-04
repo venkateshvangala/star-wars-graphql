@@ -14,12 +14,86 @@ export type Scalars = {
   Float: { input: number; output: number; }
 };
 
-export type Query = {
-  __typename?: 'Query';
-  fetchAllStars?: Maybe<Scalars['String']['output']>;
+export type FilmsListResponse = {
+  __typename?: 'FilmsListResponse';
+  title?: Maybe<Scalars['String']['output']>;
+  url?: Maybe<Scalars['String']['output']>;
 };
 
-export type TextInput = {
-  display: Scalars['Boolean']['input'];
-  optional: Scalars['Boolean']['input'];
+export type FilmsResponse = {
+  __typename?: 'FilmsResponse';
+  episode_id?: Maybe<Scalars['Int']['output']>;
+  title?: Maybe<Scalars['String']['output']>;
+};
+
+export type PlanetsListResponse = {
+  __typename?: 'PlanetsListResponse';
+  name?: Maybe<Scalars['String']['output']>;
+  url?: Maybe<Scalars['String']['output']>;
+};
+
+export type PlanetsResponse = {
+  __typename?: 'PlanetsResponse';
+  climate?: Maybe<Scalars['String']['output']>;
+  name?: Maybe<Scalars['String']['output']>;
+  terrain?: Maybe<Scalars['String']['output']>;
+};
+
+export type Query = {
+  __typename?: 'Query';
+  fetchAllFilms?: Maybe<Array<Maybe<FilmsListResponse>>>;
+  fetchAllPlanets?: Maybe<Array<Maybe<PlanetsListResponse>>>;
+  fetchAllStars?: Maybe<Array<Maybe<StarsListResponse>>>;
+  fetchAllVehicles?: Maybe<Array<Maybe<VehiclesListResponse>>>;
+  fetchFilmById?: Maybe<FilmsResponse>;
+  fetchPlanetById?: Maybe<PlanetsResponse>;
+  fetchStartById?: Maybe<StarsResponse>;
+  fetchVehiclesById?: Maybe<VehiclesListResponse>;
+};
+
+
+export type QueryFetchFilmByIdArgs = {
+  id: Scalars['Int']['input'];
+};
+
+
+export type QueryFetchPlanetByIdArgs = {
+  id: Scalars['Int']['input'];
+};
+
+
+export type QueryFetchStartByIdArgs = {
+  id: Scalars['Int']['input'];
+};
+
+
+export type QueryFetchVehiclesByIdArgs = {
+  id: Scalars['Int']['input'];
+};
+
+export type StarsListResponse = {
+  __typename?: 'StarsListResponse';
+  name?: Maybe<Scalars['String']['output']>;
+  url?: Maybe<Scalars['String']['output']>;
+};
+
+export type StarsResponse = {
+  __typename?: 'StarsResponse';
+  birth_year?: Maybe<Scalars['String']['output']>;
+  height?: Maybe<Scalars['String']['output']>;
+  name?: Maybe<Scalars['String']['output']>;
+};
+
+export type VehiclesListResponse = {
+  __typename?: 'VehiclesListResponse';
+  name?: Maybe<Scalars['String']['output']>;
+  url?: Maybe<Scalars['String']['output']>;
+};
+
+export type VehiclesResponse = {
+  __typename?: 'VehiclesResponse';
+  cost_in_credits?: Maybe<Scalars['String']['output']>;
+  model?: Maybe<Scalars['String']['output']>;
+  name?: Maybe<Scalars['String']['output']>;
+  vehicle_class?: Maybe<Scalars['String']['output']>;
 };

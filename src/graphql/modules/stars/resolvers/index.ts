@@ -1,8 +1,9 @@
-import { fetchAllStarsResolver } from "./stars.resolver";
+import { fetchAllStarsResolver, fetchStarByIdResolver } from "./stars.resolver";
 
 const StarsResolvers = {
     Query: {
-        fetchAllStars: fetchAllStarsResolver
+        fetchAllStars: fetchAllStarsResolver,
+        fetchStartById: fetchStarByIdResolver
     }
 };
 

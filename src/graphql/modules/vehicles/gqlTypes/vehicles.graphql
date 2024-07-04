@@ -1,0 +1,16 @@
+type VehiclesListResponse {
+    name: String
+    url: String
+}
+
+type VehiclesResponse {
+    name: String
+    model: String
+    vehicle_class: String
+    cost_in_credits: String
+}
+
+type Query {
+    fetchAllVehicles: [VehiclesListResponse]
+    fetchVehiclesById(id: Int!): VehiclesListResponse
+}

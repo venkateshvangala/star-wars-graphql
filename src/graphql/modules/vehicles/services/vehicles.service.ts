@@ -4,19 +4,19 @@ import { StarsListResponse, StarsResponse } from "src/graphql/__generated__/gql-
 import { get } from "lodash";
 
 @Injectable()
-export class StarsService {
-    fetchAllStars = async (payload: any): Promise<StarsListResponse> => {
+export class VehiclesService {
+    fetchAllVehicles = async (payload: any): Promise<StarsListResponse> => {
         try {
-            const response = await axios.get("https://swapi.info/api/people");
+            const response = await axios.get("https://swapi.info/api/vehicles");
             return get(response, "data", []);
         } catch (error: any) {
             throw error;
         }
     };
 
-    fetchStarById = async (id: string): Promise<StarsResponse> => {
+    fetchVehicleById = async (id: string): Promise<StarsResponse> => {
         try {
-            const response = await axios.get(`https://swapi.info/api/people/${id}`);
+            const response = await axios.get(`https://swapi.info/api/vehicles/${id}`);
             return get(response, "data", {});
         } catch (error: any) {
             throw error;
