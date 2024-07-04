@@ -1,0 +1,8 @@
+input textInput {
+    display: Boolean!
+    optional: Boolean!
+}
+
+type Query {
+    fetchAllStars: String
+}

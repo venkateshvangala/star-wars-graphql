@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "incremental": true,
+        "target": "ES2016",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "module": "CommonJS",
+        "baseUrl": "./",
+        "typeRoots": ["node_modules/@types"],
+        "declaration": true,
+        "sourceMap": true,
+        "outDir": "./dist",
+        "removeComments": true,
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "strict": true,
+        "skipLibCheck": true
+    },
+    "include": ["src/**/*", "src/__generated__", "src/graphql/__generated__", "index.ts"],
+    "exclude": ["node_modules", "**/*.spec.ts"]
+}
